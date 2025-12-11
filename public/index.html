@@ -11,5 +11,58 @@
     <link rel="stylesheet" href="../dist/output.css" />
     <title>LA Dance School</title>
   </head>
-  <body></body>
+  <body>
+    <div class="overflow-hidden">
+      <!-- header starts -->
+      <header
+        class="header fixed top-0 left-0 w-full z-10 py-3.5 before:content-[''] before:absolute before:inset-0 before:bg-[#858386] before:backdrop-blur-md before:-z-10 before:duration-500 before:opacity-0"
+      >
+        <div class="flex items-center justify-between mx-auto px-7">
+          <div class="h-[32px] flex">
+            <a class="self-center mr-2" href="#"
+              ><img
+                class="h-12 pb-2"
+                src="../src/img/home/LADanceSchool-header.png"
+                alt="logo" /></a
+            >dance school
+          </div>
+          <button
+            class="flex flex-col items-center justify-center h-10 bg-transparent border-none w-11 gap-[6px]"
+          >
+            <span class="h-[2px] w-[30px] bg-black"></span>
+            <span class="h-[2px] w-[30px] bg-black"></span>
+            <span class="h-[2px] w-[30px] bg-black"></span>
+          </button>
+        </div>
+      </header>
+      <!-- header ends -->
+      <!-- side menu starts -->
+      <div
+        class="fixed inset-0 z-50 bg-[#858386] transition-all duration-500 opacity-50 invisible"
+      ></div>
+      <div
+        class="fixed w-[280px] top-0 left-0 h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
+      >
+        <div class="py-4 border-b border-black px-7">
+          <button
+            class="relative block w-10 h-10 bg-transparent border-none rounded-[50%] transition-colors duration-700 hover:bg-red-950 before:content-[''] before:absolute before:h-[2px] before:w-7 before:inset-0 before:m-auto before:bg-black before:rotate-45 after:content-[''] after:absolute after:h-[2px] after:w-7 after:inset-0 after:m-auto after:bg-black after:-rotate-45 hover:before:bg-white hover:after:bg-white"
+          ></button>
+        </div>
+        <nav class="overflow-y-auto">
+          <ul>
+            <li><a class="font-medium text-black uppercase font-[Saira] text-2xl block py-2 px-7 relative transition-colors duration-500 before:content-[''] before:absolute before:inset-0 before:-z-[1] bg-red-950 " href="#hero">inicio</a></li>
+            <li><a href="#about">acerca</a></li>
+            <li><a href="#classes">clases</a></li>
+            <li><a href="#team">equipo</a></li>
+            <li><a href="#testimonials">testimonios</a></li>
+            <li><a href="#contact">contacto</a></li>
+          </ul>
+        </nav>
+        <div class="text-xl border-t border-black">
+          <a href="/pages/login.html">Inicio de Sesión</a>
+        </div>
+      </div>
+      <!-- side menu ends -->
+    </div>
+  </body>
 </html>
