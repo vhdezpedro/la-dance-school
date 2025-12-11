@@ -714,11 +714,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.bg-red-950{
-  --tw-bg-opacity: 1;
-  background-color: rgb(69 10 10 / var(--tw-bg-opacity, 1));
-}
-
 .bg-transparent{
   background-color: transparent;
 }
@@ -911,6 +906,16 @@ textarea {
   inset: 0px;
 }
 
+.before\:bottom-0::before{
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
+.before\:left-0::before{
+  content: var(--tw-content);
+  left: 0px;
+}
+
 .before\:-z-10::before{
   content: var(--tw-content);
   z-index: -10;
@@ -919,6 +924,11 @@ textarea {
 .before\:-z-\[1\]::before{
   content: var(--tw-content);
   z-index: -1;
+}
+
+.before\:-z-\[-1\]::before{
+  content: var(--tw-content);
+  z-index: 1;
 }
 
 .before\:m-auto::before{
@@ -934,6 +944,11 @@ textarea {
 .before\:w-7::before{
   content: var(--tw-content);
   width: 1.75rem;
+}
+
+.before\:w-0::before{
+  content: var(--tw-content);
+  width: 0px;
 }
 
 .before\:rotate-45::before{
@@ -954,6 +969,12 @@ textarea {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.before\:bg-red-950::before{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 10 10 / var(--tw-bg-opacity, 1));
+}
+
 .before\:opacity-0::before{
   content: var(--tw-content);
   opacity: 0;
@@ -965,6 +986,13 @@ textarea {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.before\:transition-all::before{
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .before\:duration-500::before{
   content: var(--tw-content);
   transition-duration: 500ms;
@@ -973,6 +1001,16 @@ textarea {
 .before\:content-\[\'\'\]::before{
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.before\:content-\[\]::before{
+  --tw-content: ;
+  content: var(--tw-content);
+}
+
+.before\:clip-path-inset::before{
+  content: var(--tw-content);
+  clip-path: inset(100px 50px);
 }
 
 .after\:absolute::after{
@@ -1022,14 +1060,54 @@ textarea {
   background-color: rgb(69 10 10 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:before\:w-full:hover::before{
+  content: var(--tw-content);
+  width: 100%;
+}
+
 .hover\:before\:bg-white:hover::before{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:before\:clip-path-fill:hover::before{
+  content: var(--tw-content);
+  clip-path: fill-box;
+}
+
+.hover\:before\:clip-path-\[inset\(0\)\]:hover::before{
+  content: var(--tw-content);
+  clip-path: path(inset(0));
+}
+
+.hover\:before\:clip-path-\[inset\(0_100\)\]:hover::before{
+  content: var(--tw-content);
+  clip-path: path(inset(0 100));
+}
+
+.hover\:before\:clip-path-\[inset\(0_100\%_\)\]:hover::before{
+  content: var(--tw-content);
+  clip-path: path(inset(0 100% ));
+}
+
+.hover\:before\:clip-path-\[inset\(0_100\%_0_0\)\]:hover::before{
+  content: var(--tw-content);
+  clip-path: path(inset(0 100% 0 0));
+}
+
 .hover\:after\:bg-white:hover::after{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.active\:before\:w-full:active::before{
+  content: var(--tw-content);
+  width: 100%;
 }
