@@ -41,7 +41,7 @@
         class="fixed inset-0 z-50 bg-[#858386] transition-all duration-500 opacity-50 invisible"
       ></div>
       <div
-        class="fixed w-[280px] top-0 left-0 h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
+        class="fixed w-[280px] top-0 left-[101%] h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
       >
         <div class="py-4 border-b border-black px-7">
           <button
@@ -101,6 +101,76 @@
         </div>
       </div>
       <!-- side menu ends -->
+      <!-- hero starts -->
+      <div class="relative py-20 h-[1100px]" id="hero">
+        <div
+          class="absolute w-[600px] h-[600px] bg-[#b2b893] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[200px] opacity-40 rounded-[50%]"
+        ></div>
+        <div class="h-full mx-auto w- px-7">
+          <img
+            class="block w-auto h-full mx-auto scale-110"
+            src="../src/img/home/hero-lorenita.png"
+            alt="img"
+          />
+          <div
+            class="absolute w-full text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-[900px] px-4"
+          >
+            <h1
+              class="text-7xl font-[Saira] text-red-950 capitalize font-semibold leading-[1.1]"
+            >
+              master your <br />moves
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- hero ends -->
+      <!-- about starts -->
+      <section class="pt-20 pb-20" id="about">
+        <div class="flex items-center gap-8 mx-auto px-7">
+          <div class="flex-1">
+            <div
+              class="max-w-[320px] relative mx-auto before:content-[''] before:absolute before:inset-0 before:border-[20px] before:border-red-950 before:rounded-lg before:-z-[1]"
+            >
+              <img
+                class="relative -top-[30px] scale-110"
+                src="../src/img/home/about.png"
+                alt="about img"
+              />
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="text-left mb-7">
+              <h2 class="text-6xl capitalize leading-[1.1] font-[Saira]">
+                nuestro estudio de baile
+              </h2>
+            </div>
+            <div>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p class="text-justify">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+              </p>
+              <p class="text-justify">
+                Curabitur non nulla sit amet nisl tempus convallis quis ac
+                lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor
+                at sem. Vivamus suscipit tortor eget felis porttitor volutpat.
+              </p>
+            </div>
+            <div class="text-red-950 font-[Saira] mt-6">
+              <span class="text-6xl font-bold leading-[1.2]">10+</span>
+              <p class="text-xl font-semibold uppercase">años de experiencia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about ends -->
     </div>
   </body>
 </html>
