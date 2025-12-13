@@ -8,6 +8,7 @@
     "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
   },
   "dependencies": {
+    "swiper": "^12.0.3",
     "tailwind-clip-path": "^1.0.0"
   }
 }
