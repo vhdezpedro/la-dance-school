@@ -5,6 +5,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     header.classList.add("before:bg-opacity-50");
     header.classList.remove("before:bg-opacity-0");
+    header.classList.remove("before:opacity-0");
   } else {
     header.classList.add("before:bg-opacity-0");
     header.classList.remove("before:bg-opacity-50");

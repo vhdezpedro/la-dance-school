@@ -78,6 +78,3 @@ textarea {
   display: block;
   resize: none;
 }
-.classes .swiper-scrollbar-drag {
-  background-color: var(--color-primary);
-}
