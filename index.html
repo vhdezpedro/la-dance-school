@@ -16,7 +16,7 @@
     <div class="overflow-hidden">
       <!-- header starts -->
       <header
-        class="header fixed top-0 left-0 w-full z-10 py-3.5 before:content-[''] before:absolute before:inset-0 before:bg-[#858386] before:backdrop-blur-md before:-z-10 before:duration-500 before:opacity-0"
+        class="header-js fixed top-0 left-0 w-full z-10 py-3.5 before:content-[''] before:absolute before:inset-0 before:bg-[#858386] before:backdrop-blur-md before:-z-10 before:duration-500"
       >
         <div class="flex items-center justify-between mx-auto px-7">
           <div class="h-[32px] flex">
@@ -28,7 +28,7 @@
             >dance school
           </div>
           <button
-            class="flex flex-col items-center justify-center h-10 bg-transparent border-none w-11 gap-[6px]"
+            class="btn-menu-js flex flex-col items-center justify-center h-10 bg-transparent border-none w-11 gap-[6px]"
           >
             <span class="h-[2px] w-[30px] bg-black"></span>
             <span class="h-[2px] w-[30px] bg-black"></span>
@@ -39,14 +39,14 @@
       <!-- header ends -->
       <!-- side menu starts -->
       <div
-        class="fixed inset-0 z-50 bg-[#858386] transition-all duration-500 opacity-50 invisible"
+        class="side-menu-overlay-js fixed inset-0 z-[100] bg-[#858386] transition-all duration-500 opacity-0 invisible"
       ></div>
       <div
-        class="fixed w-[280px] top-0 left-[101%] h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
+        class="side-menu-js fixed w-[280px] top-0 left-full h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
       >
         <div class="py-4 border-b border-black px-7">
           <button
-            class="relative block w-10 h-10 bg-transparent border-none rounded-[50%] transition-colors duration-700 hover:bg-red-950 before:content-[''] before:absolute before:h-[2px] before:w-7 before:inset-0 before:m-auto before:bg-black before:rotate-45 after:content-[''] after:absolute after:h-[2px] after:w-7 after:inset-0 after:m-auto after:bg-black after:-rotate-45 hover:before:bg-white hover:after:bg-white"
+            class="btn-close-js relative block w-10 h-10 bg-transparent border-none rounded-[50%] transition-colors duration-700 hover:bg-red-950 before:content-[''] before:absolute before:h-[2px] before:w-7 before:inset-0 before:m-auto before:bg-black before:rotate-45 after:content-[''] after:absolute after:h-[2px] after:w-7 after:inset-0 after:m-auto after:bg-black after:-rotate-45 hover:before:bg-white hover:after:bg-white"
           ></button>
         </div>
         <nav class="overflow-y-auto">
