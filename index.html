@@ -10,13 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
     <link rel="stylesheet" href="./src/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>LA Dance School</title>
   </head>
   <body>
     <div class="overflow-hidden">
       <!-- header starts -->
       <header
-        class="header-js fixed top-0 left-0 w-full z-10 py-3.5 before:content-[''] before:absolute before:inset-0 before:bg-[#858386] before:backdrop-blur-md before:-z-[1] before:duration-500 before:opacity-0"
+        class="header-js fixed top-0 left-0 w-full z-10 py-3.5 before:content-[''] before:absolute before:inset-0 before:bg-[#858386] before:backdrop-blur-md before:-z-[1] before:duration-500 before:bg-opacity-0"
       >
         <div class="flex items-center justify-between mx-auto px-7">
           <div class="h-[32px] flex">
@@ -39,10 +46,10 @@
       <!-- header ends -->
       <!-- side menu starts -->
       <div
-        class="side-menu-overlay-js fixed inset-0 z-[100] bg-[#858386] transition-all duration-500 opacity-0 invisible"
+        class="side-menu-overlay-js fixed inset-0 z-[100] bg-[#858386] transition-all duration-500 bg-opacity-0 invisible"
       ></div>
       <div
-        class="side-menu-js fixed w-[280px] top-0 left-full h-full z-[101] bg-white pb-10 transition-transform duration-500 flex flex-col"
+        class="side-menu-js fixed w-[280px] top-0 left-full h-full z-[101] bg-white pb-10 transition-all duration-500 flex flex-col"
       >
         <div class="py-4 border-b border-black px-7">
           <button
@@ -288,6 +295,121 @@
         </div>
       </section>
       <!-- classes ends -->
+      <!-- team starts -->
+      <section class="p-20" id="team">
+        <div class="mx-auto px-7">
+          <div class="mx-auto mb-16 text-center max-width-[800px]">
+            <h2 class="text-6xl capitalize leading-[1.1] font-[Saira]">
+              conoce a los intructores
+            </h2>
+          </div>
+          <div class="flex flex-row gap-8">
+            <div class="flex-1">
+              <div class="relative overflow-hidden group">
+                <img
+                  class="transition-all duration-500 origin-top group-hover:scale-110"
+                  src="./src/img/team/dayane-tannos.jpeg"
+                  alt="img"
+                />
+                <div
+                  class="absolute p-4 text-center transition-all duration-500 translate-y-5 opacity-0 bg-red-950 bottom-7 left-7 right-7 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <h3 class="text-2xl font-semibold text-white capitalize">
+                    dayane tannos
+                  </h3>
+                  <p class="text-white capitalize">instructora de pilates</p>
+                </div>
+              </div>
+              <div class="mt-3 text-center">
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="https://www.instagram.com/dayanrokus/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="relative overflow-hidden group">
+                <img
+                  src="src/img/team/frida-martinez.jpeg"
+                  alt="img"
+                  class="transition-all duration-500 origin-top group-hover:scale-110"
+                />
+                <div
+                  class="absolute p-4 text-center transition-all duration-500 translate-y-5 opacity-0 bg-red-950 bottom-7 left-7 right-7 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <h3 class="text-2xl font-semibold text-white capitalize">
+                    frida martinez
+                  </h3>
+                  <p class="text-white capitalize">instructora de yoga</p>
+                </div>
+              </div>
+              <div class="mt-3 text-center">
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="relative overflow-hidden group">
+                <img
+                  class="transition-all duration-500 origin-top group-hover:scale-110"
+                  src="src/img/team/3.jpg"
+                  alt="img"
+                />
+                <div
+                  class="absolute p-4 text-center transition-all duration-500 translate-y-5 opacity-0 bg-red-950 bottom-7 left-7 right-7 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <h3 class="text-2xl font-semibold text-white capitalize">
+                    jane doe
+                  </h3>
+                  <p class="text-white capitalize">hip-hop instructor</p>
+                </div>
+              </div>
+              <div class="mt-3 text-center">
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  class="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
+                  href="#"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- team ends -->
     </div>
 
     <script src="./src/js/swiper-bundle.min.js"></script>

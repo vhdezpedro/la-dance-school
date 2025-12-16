@@ -5,7 +5,6 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     header.classList.add("before:bg-opacity-50");
     header.classList.remove("before:bg-opacity-0");
-    header.classList.remove("before:opacity-0");
   } else {
     header.classList.add("before:bg-opacity-0");
     header.classList.remove("before:bg-opacity-50");
@@ -20,18 +19,18 @@ const closeBtn = sideMenu.querySelector(".btn-close-js");
 const menuLinks = sideMenu.querySelectorAll(".side-menu-js a");
 
 function openMenu() {
-  menuOverlay.classList.add("opacity-50");
+  menuOverlay.classList.add("bg-opacity-50");
   menuOverlay.classList.add("visible");
-  menuOverlay.classList.remove("opacity-0");
+  menuOverlay.classList.remove("bg-opacity-0");
   menuOverlay.classList.remove("invisible");
   sideMenu.classList.add("-translate-x-full");
   document.body.style.overflow = "hidden";
 }
 
 function closeMenu() {
-  menuOverlay.classList.add("opacity-0");
+  menuOverlay.classList.add("bg-opacity-0");
   menuOverlay.classList.add("invisible");
-  menuOverlay.classList.remove("opacity-50");
+  menuOverlay.classList.remove("bg-opacity-50");
   menuOverlay.classList.remove("visible");
   sideMenu.classList.remove("-translate-x-full");
   document.body.style.removeProperty("overflow");
