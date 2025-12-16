@@ -61,3 +61,26 @@ const classesSlider = new Swiper(".classes-slider", {
     },
   },
 });
+
+/* ----------- gallery slider ----------- */
+const gallerySlider = new Swiper(".gallery-slider", {
+  grabcursor: true,
+  grid: {
+    rows: 2,
+    fill: "row",
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    650: {
+      slidesPerView: 2,
+    },
+    1050: {
+      slidesPerView: 3,
+    },
+  },
+});
