@@ -78,3 +78,18 @@ textarea {
   display: block;
   resize: none;
 }
+.classes-slider .swiper-scrollbar {
+  position: static;
+  height: 8px;
+  margin: 40px auto 0;
+  max-width: 250px;
+  background-color: rgb(133, 131, 134);
+}
+
+.swiper-scrollbar-drag {
+  background-color: rgb(69, 10, 10);
+}
+.gallery-slider .swiper-pagination {
+  position: static;
+  margin-top: 10px;
+}
