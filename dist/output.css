@@ -672,6 +672,14 @@ video {
   z-index: 101;
 }
 
+.order-2{
+  order: 2;
+}
+
+.order-1{
+  order: 1;
+}
+
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -782,6 +790,26 @@ video {
   height: 100%;
 }
 
+.h-\[20px\]{
+  height: 20px;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -808,6 +836,26 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[20px\]{
+  width: 20px;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
+.w-\[150px\]{
+  width: 150px;
+}
+
+.w-\[160px\]{
+  width: 160px;
+}
+
+.w-6{
+  width: 1.5rem;
 }
 
 .max-w-\[320px\]{
@@ -872,6 +920,14 @@ video {
   resize: both;
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -902,6 +958,10 @@ video {
 
 .gap-\[6px\]{
   gap: 6px;
+}
+
+.gap-\[4px\]{
+  gap: 4px;
 }
 
 .self-center{
@@ -1016,6 +1076,10 @@ video {
   padding: 1px;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1044,6 +1108,21 @@ video {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-3\.5{
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-10{
@@ -1108,6 +1187,16 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1118,6 +1207,10 @@ video {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .uppercase{
@@ -1352,6 +1445,11 @@ textarea {
   height: 2px;
 }
 
+.before\:h-\[1px\]::before{
+  content: var(--tw-content);
+  height: 1px;
+}
+
 .before\:w-0::before{
   content: var(--tw-content);
   width: 0px;
@@ -1360,6 +1458,11 @@ textarea {
 .before\:w-7::before{
   content: var(--tw-content);
   width: 1.75rem;
+}
+
+.before\:w-3\.5::before{
+  content: var(--tw-content);
+  width: 0.875rem;
 }
 
 .before\:rotate-45::before{
@@ -1455,9 +1558,19 @@ textarea {
   height: 2px;
 }
 
+.after\:h-\[1px\]::after{
+  content: var(--tw-content);
+  height: 1px;
+}
+
 .after\:w-7::after{
   content: var(--tw-content);
   width: 1.75rem;
+}
+
+.after\:w-3\.5::after{
+  content: var(--tw-content);
+  width: 0.875rem;
 }
 
 .after\:-rotate-45::after{
@@ -1540,4 +1653,112 @@ textarea {
 
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
+}
+
+@media (min-width: 768px){
+  .md\:order-2{
+    order: 2;
+  }
+
+  .md\:order-1{
+    order: 1;
+  }
+
+  .md\:grid{
+    display: grid;
+  }
+
+  .md\:h-\[32px\]{
+    height: 32px;
+  }
+
+  .md\:h-12{
+    height: 3rem;
+  }
+
+  .md\:h-10{
+    height: 2.5rem;
+  }
+
+  .md\:h-0{
+    height: 0px;
+  }
+
+  .md\:h-0\.5{
+    height: 0.125rem;
+  }
+
+  .md\:w-7{
+    width: 1.75rem;
+  }
+
+  .md\:w-\[280px\]{
+    width: 280px;
+  }
+
+  .md\:w-10{
+    width: 2.5rem;
+  }
+
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:p-4{
+    padding: 1rem;
+  }
+
+  .md\:p-7{
+    padding: 1.75rem;
+  }
+
+  .md\:py-3\.5{
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:before\:h-\[2px\]::before{
+    content: var(--tw-content);
+    height: 2px;
+  }
+
+  .md\:before\:w-7::before{
+    content: var(--tw-content);
+    width: 1.75rem;
+  }
+
+  .md\:after\:h-\[2px\]::after{
+    content: var(--tw-content);
+    height: 2px;
+  }
+
+  .md\:after\:w-7::after{
+    content: var(--tw-content);
+    width: 1.75rem;
+  }
 }
