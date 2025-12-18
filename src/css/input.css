@@ -82,7 +82,7 @@ textarea {
   position: static;
   height: 8px;
   margin: 40px auto 0;
-  max-width: 250px;
+  max-width: 150px;
   background-color: rgb(133, 131, 134);
 }
 
@@ -92,4 +92,10 @@ textarea {
 .gallery-slider .swiper-pagination {
   position: static;
   margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .classes-slider .swiper-scrollbar {
+    max-width: 250px;
+  }
 }

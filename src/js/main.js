@@ -76,7 +76,7 @@ const gallerySlider = new Swiper(".gallery-slider", {
     clickable: true,
   },
   breakpoints: {
-    650: {
+    768: {
       slidesPerView: 2,
     },
     1050: {
