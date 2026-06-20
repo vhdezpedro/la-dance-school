@@ -107,11 +107,11 @@ function Home() {
 
       {/* About */}
       <section className="py-10" id="about">
-        <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 px-7">
+        <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 px-7 items-center">
           <div className="order-2 md:order-1">
-            <div className="max-w-[320px] relative mx-auto before:content-[''] before:absolute before:inset-0 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
+            <div className="max-w-100 relative mx-auto before:content-[''] before:absolute before:inset-0 md:before:border-25 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
               <img
-                className="relative -top-7.5 scale-110"
+                className="relative -top-9 scale-112"
                 src="/src/assets/img/home/about.png"
                 alt="about img"
               />
@@ -125,21 +125,40 @@ function Home() {
             </div>
             <div>
               <p className="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                En{" "}
+                <span className="font-bold uppercase font-[Saira]">
+                  LA Dance School – Estudio Fitness
+                </span>{" "}
+                somos un espacio integral de formación artística y física
+                dedicando a brindar experiencias de aprendizaje de alto nivel.
+                Nos enfocamos en ofrecer clases estructuradas, impartidas por
+                maestros profesionales y certificados, en instalaciones
+                adecuadas que favorecen el desarrollo técnico y creativo.
               </p>
               <p className="text-justify">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                <br />
+                <span className="font-bold uppercase font-[Saira]">
+                  Nuestra misión
+                </span>{" "}
+                es acompañar a cada alumno en su proceso de crecimiento personal
+                y artístico fomentando un ambiente seguro, libre y profesional
+                donde puedan explorar su potencial, fortalecer su disciplina y
+                conectar con su identidad a través del movimiento.
               </p>
               <p className="text-justify">
-                Curabitur non nulla sit amet nisl tempus convallis quis ac
-                lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor
-                at sem. Vivamus suscipit tortor eget felis porttitor volutpat.
+                <br />
+                <span className="font-bold uppercase font-[Saira]">
+                  Nuestra visión,
+                </span>{" "}
+                ser una escuela referente a nivel local, nacional e
+                internacional en la formación de artistas y profesionales del
+                movimiento, reconocida por su calidad académica, su enfoque
+                humano y su impacto en la comunidad. <br /> Aspiramos a
+                construir una comunidad sólida que impulse el talento, genere
+                oportunidades y eleve el estándar de la enseñanza artística,
+                formando alumnos que no solo dominen la técnica, sino que
+                también desarrollen confianza, identidad y propósito en su
+                camino profesional y personal
               </p>
             </div>
             <div className="text-red-950 font-[Saira] mt-6">
@@ -403,7 +422,7 @@ function Home() {
             <div className="flex-1 border-2 rounded-2xl p-px border-black">
               <iframe
                 className="rounded-2xl h-95 md:h-112.5"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.4570013827133!2d-96.6971084253802!3d17.0502845124299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c7231f319aba6d%3A0x4d1b6bcdc9308da8!2sBooty%20GYM!5e0!3m2!1ses-419!2smx!4v1765925755387!5m2!1ses-419!2smx"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.458584349562!2d-96.69710862507334!3d17.05020698378067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c723eaa7b0bcf1%3A0x52d06f7745cd3068!2sLA%20dance%20school%20-%20Estudio%20fitness!5e0!3m2!1ses-419!2suk!4v1781974473203!5m2!1ses-419!2suk"
                 width="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
