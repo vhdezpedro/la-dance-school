@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,13 +6,27 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faMagnifyingGlass,
+  faXmark,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "swiper/css";
 import "swiper/css/scrollbar";
+import "swiper/css/grid";
 
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Grid } from "swiper/modules";
+
+const imageModules = import.meta.glob(
+  "/src/assets/img/gallery/*.{jpeg,jpg,png,webp}",
+  { eager: true, import: "default" },
+);
 
 function Home() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const classes = [
     {
       name: "ritmos latinos",
@@ -62,10 +77,13 @@ function Home() {
     },
   ];
 
-  const gallery = Array.from(
-    { length: 8 },
-    (_, i) => `/src/assets/img/gallery/gallery-${i + 1}.jpeg`,
-  );
+  const gallery = Object.keys(imageModules)
+    .sort((a, b) => {
+      const numA = parseInt(a.match(/gallery-(\d+)/)?.[1] || 0);
+      const numB = parseInt(b.match(/gallery-(\d+)/)?.[1] || 0);
+      return numA - numB;
+    })
+    .map((key) => imageModules[key]);
 
   return (
     <div className="overflow-hidden">
@@ -251,22 +269,92 @@ function Home() {
               nuestra galería
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Swiper
+            modules={[Scrollbar, Grid]}
+            grid={{ rows: 2, fill: "row" }}
+            spaceBetween={10}
+            slidesPerView={1}
+            scrollbar={{
+              draggable: true,
+              el: ".gallery-scrollbar",
+              horizontalClass: "swiper-scrollbar-horizontal",
+            }}
+            breakpoints={{
+              1024: { slidesPerView: 4 },
+            }}
+          >
             {gallery.map((img, index) => (
-              <div key={index} className="relative overflow-hidden group">
-                <img
-                  className="w-full h-100 object-cover transition-all duration-500 group-hover:scale-110"
-                  src={img}
-                  alt={`gallery ${index + 1}`}
-                />
-                <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 bg-black opacity-0 group-hover:opacity-70">
-                  <i className="text-3xl text-red-950 fa-solid fa-magnifying-glass"></i>
+              <SwiperSlide key={index}>
+                <div
+                  className="relative overflow-hidden group cursor-pointer"
+                  onClick={() => {
+                    setLightboxIndex(index);
+                    setLightboxOpen(true);
+                  }}
+                >
+                  <img
+                    className="w-full h-75 object-cover transition-all duration-500 group-hover:scale-110"
+                    src={img}
+                    alt={`gallery ${index + 1}`}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 bg-black opacity-0 group-hover:opacity-70">
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      className="text-3xl text-red-950"
+                    />
+                  </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
+          <div className="gallery-scrollbar mt-6 mx-auto"></div>
         </div>
       </section>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <button
+            className="absolute top-4 right-4 z-10 text-white text-3xl cursor-pointer hover:text-red-400 transition-colors"
+            onClick={() => setLightboxOpen(false)}
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+
+          <button
+            className="absolute left-2 md:left-6 z-10 text-white text-2xl md:text-4xl cursor-pointer hover:text-red-400 transition-colors"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) =>
+                prev === 0 ? gallery.length - 1 : prev - 1,
+              );
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+
+          <img
+            src={gallery[lightboxIndex]}
+            alt={`gallery ${lightboxIndex + 1}`}
+            className="max-w-[90vw] max-h-[85vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            className="absolute right-2 md:right-6 z-10 text-white text-2xl md:text-4xl cursor-pointer hover:text-red-400 transition-colors"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) =>
+                prev === gallery.length - 1 ? 0 : prev + 1,
+              );
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+      )}
 
       {/* Location */}
       <section className="py-10" id="location">
