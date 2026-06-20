@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(225, 224, 227);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 131, 134);
+}
+
+.classes-scrollbar {
+  width: 200px;
+  height: 4px;
+  background: #e1e0e3;
+  border-radius: 2px;
+}
+
+.classes-scrollbar .swiper-scrollbar-drag {
+  background: #6b0a0a;
+  border-radius: 2px;
+}
+
+.gallery-scrollbar {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.gallery-scrollbar .swiper-scrollbar-drag {
+  background: #fff;
+  border-radius: 2px;
+}
