@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Classes from "./pages/Classes";
+import LorenitaAndrade from "./pages/LorenitaAndrade";
 import Login from "./pages/admin/Login";
 import AdminLayout from "./pages/admin/Dashboard";
 
@@ -25,6 +26,7 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/clases" element={<Classes />} />
                   <Route path="/clases/:section" element={<Classes />} />
+                  <Route path="/lorenita-andrade" element={<LorenitaAndrade />} />
                 </Routes>
               </main>
               <Footer />

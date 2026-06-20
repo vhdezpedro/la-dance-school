@@ -163,7 +163,7 @@ function Home() {
             </div>
             <div className="text-red-950 font-[Saira] mt-6">
               <span className="text-5xl md:text-6xl font-bold leading-[1.2]">
-                10+
+                20+
               </span>
               <p className="text-lg font-semibold uppercase md:text-xl">
                 años de experiencia

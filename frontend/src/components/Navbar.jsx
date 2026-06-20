@@ -85,7 +85,7 @@ function Navbar() {
           </ul>
         </nav>
         <div className="font-medium border-t border-black text-black uppercase font-[Saira] text-xl md:text-2xl block p-2 md:px-4 relative transition-colors duration-500 before:content-[''] before:absolute before:inset-0 before:z-[-1] before:bg-red-950 before:w-0 before:transition-all before:duration-500 hover:before:w-full active:before:w-full hover:text-white">
-          <Link to="/lorenita-andrade" onClick={() => setMenuOpen(false)}>
+          <Link to="/lorenita-andrade/" onClick={() => setMenuOpen(false)}>
             Conoce a <br />
             <span className="text-sm md:text-xl">Lorenita Andrade</span>
           </Link>
