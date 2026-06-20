@@ -1,4 +1,12 @@
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/element/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import { Navigation, Pagination, EffectFade } from "swiper/modules";
 
 function Home() {
   const classes = [
@@ -134,22 +142,34 @@ function Home() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {classes.map((cls) => (
-              <Link
-                key={cls.link}
-                to={`/clases#${cls.link}`}
-                className="transition-transform duration-500 rounded-2xl bg-red-950 p-7 hover:scale-105"
-              >
-                <img
-                  className="block mx-auto h-65"
-                  src={cls.image}
-                  alt={cls.name}
-                />
-                <h3 className="mt-4 text-xl font-semibold text-center text-white capitalize">
-                  {cls.name}
-                </h3>
-              </Link>
-            ))}
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={3}
+              navigation={true}
+              // scrollbar={{ draggable: true }}
+              // breakpoints={{
+              //   650: { slidesPerView: 2 },
+              //   1050: { slidesPerView: 3 },
+              // }}
+            >
+              {classes.map((cls) => (
+                <SwiperSlide key={cls.link}>
+                  {/* <Link
+                    to={`/classes#${cls.link}`}
+                    className="transition-transform duration-500 rounded-2xl bg-red-950 p-7 hover:scale-105"
+                  > */}
+                  <img
+                    // className="block mx-auto h-65"
+                    src={cls.image}
+                    alt={cls.name}
+                  />
+                  <h3 className="mt-4 text-xl font-semibold text-center text-white capitalize">
+                    {cls.name}
+                  </h3>
+                  {/* </Link> */}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
