@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
 
 import "swiper/css";
-import "swiper/element/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
+import { Scrollbar } from "swiper/modules";
 
 function Home() {
   const classes = [
@@ -141,36 +144,35 @@ function Home() {
               elige tu estilo de baile
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={3}
-              navigation={true}
-              // scrollbar={{ draggable: true }}
-              // breakpoints={{
-              //   650: { slidesPerView: 2 },
-              //   1050: { slidesPerView: 3 },
-              // }}
-            >
-              {classes.map((cls) => (
-                <SwiperSlide key={cls.link}>
-                  {/* <Link
-                    to={`/classes#${cls.link}`}
-                    className="transition-transform duration-500 rounded-2xl bg-red-950 p-7 hover:scale-105"
-                  > */}
+          <Swiper
+            spaceBetween={30}
+            modules={[Scrollbar]}
+            scrollbar={{
+              draggable: true,
+              el: ".classes-scrollbar",
+              horizontalClass: "swiper-scrollbar-horizontal",
+            }}
+            breakpoints={{
+              650: { slidesPerView: 2 },
+              1050: { slidesPerView: 3 },
+            }}
+          >
+            {classes.map((cls) => (
+              <SwiperSlide key={cls.link}>
+                <div className="transition-transform duration-500 rounded-2xl bg-red-950 p-7 hover:scale-105">
                   <img
-                    // className="block mx-auto h-65"
                     src={cls.image}
                     alt={cls.name}
+                    className="block mx-auto h-65"
                   />
                   <h3 className="mt-4 text-xl font-semibold text-center text-white capitalize">
                     {cls.name}
                   </h3>
-                  {/* </Link> */}
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="classes-scrollbar mt-6 mx-auto"></div>
         </div>
       </section>
 
@@ -198,27 +200,42 @@ function Home() {
                     <p className="text-white capitalize">{member.role}</p>
                   </div>
                 </div>
-                <div className="mt-3 text-center">
-                  <a
-                    className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
-                    href="#"
-                  >
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a
-                    className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
-                    href={member.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                  <a
-                    className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] text-red-950 transition-colors duration-500 mx-1 hover:text-white hover:bg-red-950"
-                    href="#"
-                  >
-                    <i className="fa-brands fa-tiktok"></i>
-                  </a>
+                <div className="mt-3 text-center flex justify-center items-center">
+                  <div className="group">
+                    <a
+                      className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] mx-1 transition-colors duration-500 group-hover:bg-red-950"
+                      href="#"
+                    >
+                      <FontAwesomeIcon
+                        icon={faFacebookF}
+                        className="text-red-950 transition-colors duration-500 group-hover:text-white"
+                      />
+                    </a>
+                  </div>
+                  <div className="group">
+                    <a
+                      className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] mx-1 transition-colors duration-500 group-hover:bg-red-950"
+                      href={member.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="text-red-950 transition-colors duration-500 group-hover:text-white"
+                      />
+                    </a>
+                  </div>
+                  <div className="group">
+                    <a
+                      className="inline-flex items-center justify-center w-10 h-10 text-lg rounded-[50%] mx-1 transition-colors duration-500 group-hover:bg-red-950"
+                      href="#"
+                    >
+                      <FontAwesomeIcon
+                        icon={faTiktok}
+                        className="text-red-950 transition-colors duration-500 group-hover:text-white"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

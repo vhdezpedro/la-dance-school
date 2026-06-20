@@ -15,8 +15,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: black;
-  background-color: white;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -52,4 +50,16 @@ button {
 
 ::-webkit-scrollbar-thumb {
   background: rgb(133, 131, 134);
+}
+
+.classes-scrollbar {
+  width: 200px;
+  height: 4px;
+  background: #e1e0e3;
+  border-radius: 2px;
+}
+
+.classes-scrollbar .swiper-scrollbar-drag {
+  background: #6b0a0a;
+  border-radius: 2px;
 }
