@@ -1,37 +1,76 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Home() {
   const classes = [
-    { name: 'ritmos latinos', image: '/src/assets/img/dance/salsa.png', link: 'ritmos-latinos' },
-    { name: 'urbano - k-pop', image: '/src/assets/img/dance/hip-hop.png', link: 'urbano-kpop' },
-    { name: 'kids', image: '/src/assets/img/dance/kids.png', link: 'kids' },
-    { name: 'yoga - pilates', image: '/src/assets/img/dance/yoga.png', link: 'yoga-pilates' },
-    { name: 'telas aéreas', image: '/src/assets/img/dance/telas-aereas.png', link: 'telas-aereas' },
-    { name: 'pole dance - heels', image: '/src/assets/img/dance/pole-dance.png', link: 'poledance-heels' },
-  ]
+    {
+      name: "ritmos latinos",
+      image: "/src/assets/img/dance/salsa.png",
+      link: "ritmos-latinos",
+    },
+    {
+      name: "urbano - k-pop",
+      image: "/src/assets/img/dance/hip-hop.png",
+      link: "urbano-kpop",
+    },
+    { name: "kids", image: "/src/assets/img/dance/kids.png", link: "kids" },
+    {
+      name: "yoga - pilates",
+      image: "/src/assets/img/dance/yoga.png",
+      link: "yoga-pilates",
+    },
+    {
+      name: "telas aéreas",
+      image: "/src/assets/img/dance/telas-aereas.png",
+      link: "telas-aereas",
+    },
+    {
+      name: "pole dance - heels",
+      image: "/src/assets/img/dance/pole-dance.png",
+      link: "poledance-heels",
+    },
+  ];
 
   const team = [
-    { name: 'dayane tannos', role: 'instructora de pilates', image: '/src/assets/img/team/dayane-tannos.jpeg', instagram: 'https://www.instagram.com/dayanrokus/' },
-    { name: 'frida martinez', role: 'instructora de yoga', image: '/src/assets/img/team/frida-martinez.jpeg', instagram: '#' },
-    { name: 'jane doe', role: 'hip-hop instructor', image: '/src/assets/img/team/3.jpg', instagram: '#' },
-  ]
+    {
+      name: "dayane tannos",
+      role: "instructora de pilates",
+      image: "/src/assets/img/team/dayane-tannos.jpeg",
+      instagram: "https://www.instagram.com/dayanrokus/",
+    },
+    {
+      name: "frida martinez",
+      role: "instructora de yoga",
+      image: "/src/assets/img/team/frida-martinez.jpeg",
+      instagram: "#",
+    },
+    {
+      name: "jane doe",
+      role: "hip-hop instructor",
+      image: "/src/assets/img/team/3.jpg",
+      instagram: "#",
+    },
+  ];
 
-  const gallery = Array.from({ length: 8 }, (_, i) => `/src/assets/img/gallery/gallery-${i + 1}.jpeg`)
+  const gallery = Array.from(
+    { length: 8 },
+    (_, i) => `/src/assets/img/gallery/gallery-${i + 1}.jpeg`,
+  );
 
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <div className="relative py-20 md:h-[1100px]" id="hero">
-        <div className="absolute w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#b2b893] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[200px] opacity-40 rounded-[50%]"></div>
+      <div className="relative py-20 md:h-275" id="hero">
+        <div className="absolute w-100 md:w-150 h-100 md:h-150 bg-[#b2b893] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[200px] opacity-40 rounded-[50%]"></div>
         <div className="h-full mx-auto px-7">
           <img
             className="block w-auto h-full mx-auto scale-110"
             src="/src/assets/img/home/hero-lorenita.png"
             alt="img"
           />
-          <div className="absolute w-full text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-[900px] px-4">
+          <div className="absolute w-full text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-225 px-4">
             <h1 className="text-6xl md:text-7xl font-[Saira] text-red-950 capitalize font-semibold leading-[1.1]">
-              master your <br />moves
+              master your <br />
+              moves
             </h1>
           </div>
         </div>
@@ -41,9 +80,9 @@ function Home() {
       <section className="py-10" id="about">
         <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 px-7">
           <div className="order-2 md:order-1">
-            <div className="max-w-[320px] relative mx-auto before:content-[''] before:absolute before:inset-0 before:border-[20px] before:border-red-950 before:rounded-lg before:-z-[1]">
+            <div className="max-w-[320px] relative mx-auto before:content-[''] before:absolute before:inset-0 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
               <img
-                className="relative -top-[30px] scale-110"
+                className="relative -top-7.5 scale-110"
                 src="/src/assets/img/home/about.png"
                 alt="about img"
               />
@@ -75,8 +114,12 @@ function Home() {
               </p>
             </div>
             <div className="text-red-950 font-[Saira] mt-6">
-              <span className="text-5xl md:text-6xl font-bold leading-[1.2]">10+</span>
-              <p className="text-lg font-semibold uppercase md:text-xl">años de experiencia</p>
+              <span className="text-5xl md:text-6xl font-bold leading-[1.2]">
+                10+
+              </span>
+              <p className="text-lg font-semibold uppercase md:text-xl">
+                años de experiencia
+              </p>
             </div>
           </div>
         </div>
@@ -85,7 +128,7 @@ function Home() {
       {/* Classes */}
       <section className="py-10" id="classes">
         <div className="mx-auto px-7">
-          <div className="mx-auto mb-16 text-center max-w-[800px]">
+          <div className="mx-auto mb-16 text-center max-w-200">
             <h2 className="text-5xl capitalize leading-[1.1] font-[Saira]">
               elige tu estilo de baile
             </h2>
@@ -98,7 +141,7 @@ function Home() {
                 className="transition-transform duration-500 rounded-2xl bg-red-950 p-7 hover:scale-105"
               >
                 <img
-                  className="block mx-auto h-[260px]"
+                  className="block mx-auto h-65"
                   src={cls.image}
                   alt={cls.name}
                 />
@@ -114,7 +157,7 @@ function Home() {
       {/* Team */}
       <section className="py-10" id="team">
         <div className="mx-auto px-7">
-          <div className="mx-auto mb-16 text-center max-w-[800px]">
+          <div className="mx-auto mb-16 text-center max-w-200">
             <h2 className="text-5xl md:text-6xl capitalize leading-[1.1] font-[Saira]">
               conoce a los instructores
             </h2>
@@ -166,7 +209,7 @@ function Home() {
       {/* Gallery */}
       <section className="py-10 bg-red-950" id="gallery">
         <div className="mx-auto px-7">
-          <div className="mx-auto mb-16 text-center max-w-[800px]">
+          <div className="mx-auto mb-16 text-center max-w-200">
             <h2 className="text-5xl md:text-6xl capitalize leading-[1.1] font-[Saira] text-white">
               nuestra galería
             </h2>
@@ -175,7 +218,7 @@ function Home() {
             {gallery.map((img, index) => (
               <div key={index} className="relative overflow-hidden group">
                 <img
-                  className="w-full h-[400px] object-cover transition-all duration-500 group-hover:scale-110"
+                  className="w-full h-100 object-cover transition-all duration-500 group-hover:scale-110"
                   src={img}
                   alt={`gallery ${index + 1}`}
                 />
@@ -191,7 +234,7 @@ function Home() {
       {/* Location */}
       <section className="py-10" id="location">
         <div className="mx-auto px-7">
-          <div className="mx-auto mb-16 text-center max-w-[800px]">
+          <div className="mx-auto mb-16 text-center max-w-200">
             <h2 className="text-5xl md:text-6xl capitalize leading-[1.1] font-[Saira]">
               ubícanos
             </h2>
@@ -202,7 +245,9 @@ function Home() {
                 <div className="flex mt-10 md:block">
                   <i className="mt-1 mr-1 text-2xl text-red-950 fa-solid fa-map-marker-alt"></i>
                   <div>
-                    <h3 className="mb-1 text-2xl font-medium capitalize">dirección</h3>
+                    <h3 className="mb-1 text-2xl font-medium capitalize">
+                      dirección
+                    </h3>
                     <p>
                       Av. Hornos 5 Ampliación Sta Lucia. <br />
                       Santa Lucía del camino, CP 71243. <br />
@@ -213,7 +258,9 @@ function Home() {
                 <div className="flex mt-10 md:block">
                   <i className="mt-1 mr-1 text-2xl fa-brands fa-instagram text-red-950"></i>
                   <div>
-                    <h3 className="mb-1 text-2xl font-medium capitalize">escríbenos</h3>
+                    <h3 className="mb-1 text-2xl font-medium capitalize">
+                      escríbenos
+                    </h3>
                     <p>
                       <a
                         className="text-red-950 hover:font-medium hover:underline"
@@ -228,9 +275,9 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 border-2 rounded-2xl p-[1px] border-black">
+            <div className="flex-1 border-2 rounded-2xl p-px border-black">
               <iframe
-                className="rounded-2xl h-[380px] md:h-[450px]"
+                className="rounded-2xl h-95 md:h-112.5"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.4570013827133!2d-96.6971084253802!3d17.0502845124299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c7231f319aba6d%3A0x4d1b6bcdc9308da8!2sBooty%20GYM!5e0!3m2!1ses-419!2smx!4v1765925755387!5m2!1ses-419!2smx"
                 width="100%"
                 style={{ border: 0 }}
@@ -243,7 +290,7 @@ function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
