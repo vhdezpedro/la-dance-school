@@ -4,6 +4,7 @@ import ManageClasses from './ManageClasses'
 import ManageTeachers from './ManageTeachers'
 import ManageStudents from './ManageStudents'
 import ManageImages from './ManageImages'
+import logoImg from '/src/assets/img/home/LADanceSchool-header.png'
 
 function AdminLayout() {
   const [user, setUser] = useState(null)
@@ -46,7 +47,7 @@ function AdminLayout() {
           <div className="flex items-center gap-3">
             <img
               className="h-10"
-              src="/src/assets/img/home/LADanceSchool-header.png"
+              src={logoImg}
               alt="logo"
             />
             {sidebarOpen && (

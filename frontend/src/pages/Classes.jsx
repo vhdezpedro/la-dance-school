@@ -1,4 +1,10 @@
 import { useParams } from 'react-router-dom'
+import salsaImg from '/src/assets/img/dance/salsa.png'
+import hipHopImg from '/src/assets/img/dance/hip-hop.png'
+import kidsImg from '/src/assets/img/dance/kids.png'
+import yogaImg from '/src/assets/img/dance/yoga.png'
+import telasAereasImg from '/src/assets/img/dance/telas-aereas.png'
+import poleDanceImg from '/src/assets/img/dance/pole-dance.png'
 
 function Classes() {
   const { section } = useParams()
@@ -7,42 +13,42 @@ function Classes() {
     {
       id: 'ritmos-latinos',
       name: 'Ritmos Latinos',
-      image: '/src/assets/img/dance/salsa.png',
+      image: salsaImg,
       schedule: 'Lunes y Miércoles 6:00 PM - 7:00 PM',
       description: 'Aprende los ritmos más vibrantes de Latinoamérica: salsa, bachata, cumbia y más.',
     },
     {
       id: 'urbano-kpop',
       name: 'Urbano - K-Pop',
-      image: '/src/assets/img/dance/hip-hop.png',
+      image: hipHopImg,
       schedule: 'Martes y Jueves 5:00 PM - 6:00 PM',
       description: 'Estilos urbanos y coreografías K-pop para todos los niveles.',
     },
     {
       id: 'kids',
       name: 'Kids',
-      image: '/src/assets/img/dance/kids.png',
+      image: kidsImg,
       schedule: 'Sábados 10:00 AM - 11:00 AM',
       description: 'Clases divertidas de baile para los más pequeños de la casa.',
     },
     {
       id: 'yoga-pilates',
       name: 'Yoga - Pilates',
-      image: '/src/assets/img/dance/yoga.png',
+      image: yogaImg,
       schedule: 'Lunes a Viernes 7:00 AM - 8:00 AM',
       description: 'Fortalece tu cuerpo y mente con nuestras clases de yoga y pilates.',
     },
     {
       id: 'telas-aereas',
       name: 'Telas Aéreas',
-      image: '/src/assets/img/dance/telas-aereas.png',
+      image: telasAereasImg,
       schedule: 'Martes y Jueves 6:00 PM - 7:00 PM',
       description: 'Arte aéreo con telas. Fortalece, estira y diviértete volando.',
     },
     {
       id: 'poledance-heels',
       name: 'Pole Dance - Heels',
-      image: '/src/assets/img/dance/pole-dance.png',
+      image: poleDanceImg,
       schedule: 'Miércoles y Viernes 6:00 PM - 7:00 PM',
       description: 'Pole dance y baile con tacones. Expresa tu sensualidad y fuerza.',
     },

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import logoImg from '/src/assets/img/home/LADanceSchool-header.png'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -38,7 +39,7 @@ function Login() {
         <div className="text-center mb-8">
           <img
             className="h-16 mx-auto mb-4"
-            src="/src/assets/img/home/LADanceSchool-header.png"
+            src={logoImg}
             alt="logo"
           />
           <h1 className="text-3xl font-bold text-red-950 font-[Saira]">

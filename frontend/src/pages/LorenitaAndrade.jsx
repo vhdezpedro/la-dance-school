@@ -7,6 +7,7 @@ import {
   faCertificate,
   faMedal,
 } from "@fortawesome/free-solid-svg-icons";
+import lorenitaImg from "/src/assets/img/lorenita-andrade/lorenita-andrade.png";
 
 function LorenitaAndrade() {
   const timeline = [
@@ -92,7 +93,7 @@ function LorenitaAndrade() {
             <div className="relative w-64 h-64 md:w-100 md:h-100 shrink-0 before:content-[''] before:absolute before:inset-0 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
               <img
                 className="relative w-full h-full object-cover rounded-lg -top-4 -left-4"
-                src="/src/assets/img/lorenita-andrade/lorenita-andrade.png"
+                src={lorenitaImg}
                 alt="Lorenita Andrade"
               />
             </div>
@@ -125,7 +126,7 @@ function LorenitaAndrade() {
               <div className="max-w-[320px] mx-auto before:content-[''] before:absolute before:inset-0 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
                 <img
                   className="relative -top-4 -left-4 w-full rounded-lg object-cover h-80"
-                  src="/src/assets/img/lorenita-andrade/lorenita-andrade.png"
+                  src={lorenitaImg}
                   alt="Lorenita Andrade"
                 />
               </div>

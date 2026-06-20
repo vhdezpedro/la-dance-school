@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import logoImg from "/src/assets/img/home/LADanceSchool-header.png";
 
 function Navbar() {
   const [header, setHeader] = useState(false);
@@ -29,7 +30,7 @@ function Navbar() {
           <Link to="/" className="h-6 md:h-8 flex items-center">
             <img
               className="h-8 pb-2 md:h-12 mr-2"
-              src="/src/assets/img/home/LADanceSchool-header.png"
+              src={logoImg}
               alt="logo"
             />
             <span className="self-center">dance school</span>

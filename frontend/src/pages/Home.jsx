@@ -19,6 +19,18 @@ import "swiper/css/grid";
 
 import { Scrollbar, Grid } from "swiper/modules";
 
+import salsaImg from "/src/assets/img/dance/salsa.png";
+import hipHopImg from "/src/assets/img/dance/hip-hop.png";
+import kidsImg from "/src/assets/img/dance/kids.png";
+import yogaImg from "/src/assets/img/dance/yoga.png";
+import telasAereasImg from "/src/assets/img/dance/telas-aereas.png";
+import poleDanceImg from "/src/assets/img/dance/pole-dance.png";
+import dayaneTannosImg from "/src/assets/img/team/dayane-tannos.jpeg";
+import fridaMartinezImg from "/src/assets/img/team/frida-martinez.jpeg";
+import janeDoeImg from "/src/assets/img/team/3.jpg";
+import heroLorenitaImg from "/src/assets/img/home/hero-lorenita.png";
+import aboutImg from "/src/assets/img/home/about.png";
+
 const imageModules = import.meta.glob(
   "/src/assets/img/gallery/*.{jpeg,jpg,png,webp}",
   { eager: true, import: "default" },
@@ -30,28 +42,28 @@ function Home() {
   const classes = [
     {
       name: "ritmos latinos",
-      image: "/src/assets/img/dance/salsa.png",
+      image: salsaImg,
       link: "ritmos-latinos",
     },
     {
       name: "urbano - k-pop",
-      image: "/src/assets/img/dance/hip-hop.png",
+      image: hipHopImg,
       link: "urbano-kpop",
     },
-    { name: "kids", image: "/src/assets/img/dance/kids.png", link: "kids" },
+    { name: "kids", image: kidsImg, link: "kids" },
     {
       name: "yoga - pilates",
-      image: "/src/assets/img/dance/yoga.png",
+      image: yogaImg,
       link: "yoga-pilates",
     },
     {
       name: "telas aéreas",
-      image: "/src/assets/img/dance/telas-aereas.png",
+      image: telasAereasImg,
       link: "telas-aereas",
     },
     {
       name: "pole dance - heels",
-      image: "/src/assets/img/dance/pole-dance.png",
+      image: poleDanceImg,
       link: "poledance-heels",
     },
   ];
@@ -60,19 +72,19 @@ function Home() {
     {
       name: "dayane tannos",
       role: "instructora de pilates",
-      image: "/src/assets/img/team/dayane-tannos.jpeg",
+      image: dayaneTannosImg,
       instagram: "https://www.instagram.com/dayanrokus/",
     },
     {
       name: "frida martinez",
       role: "instructora de yoga",
-      image: "/src/assets/img/team/frida-martinez.jpeg",
+      image: fridaMartinezImg,
       instagram: "#",
     },
     {
       name: "jane doe",
       role: "hip-hop instructor",
-      image: "/src/assets/img/team/3.jpg",
+      image: janeDoeImg,
       instagram: "#",
     },
   ];
@@ -93,7 +105,7 @@ function Home() {
         <div className="h-full mx-auto px-7">
           <img
             className="block w-auto h-full mx-auto scale-110"
-            src="/src/assets/img/home/hero-lorenita.png"
+            src={heroLorenitaImg}
             alt="img"
           />
           <div className="absolute w-full text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-225 px-4">
@@ -112,7 +124,7 @@ function Home() {
             <div className="max-w-100 relative mx-auto before:content-[''] before:absolute before:inset-0 md:before:border-25 before:border-20 before:border-red-950 before:rounded-lg before:z-[-1]">
               <img
                 className="relative -top-9 scale-112"
-                src="/src/assets/img/home/about.png"
+                src={aboutImg}
                 alt="about img"
               />
             </div>
